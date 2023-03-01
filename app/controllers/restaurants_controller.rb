@@ -63,10 +63,10 @@ class RestaurantsController < ApplicationController
     @restaurants = Restaurant.where(rating: 5)
   end
 
-    # GET /restaurants/chef
-    def chef
-      @chef_name = @restaurant.chef_name
-    end
+  # GET /restaurants/chef
+  def chef
+    @chef_name = @restaurant.chef_name
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
