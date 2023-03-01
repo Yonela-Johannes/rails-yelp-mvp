@@ -18,6 +18,8 @@ gem "puma", "~> 5.0"
 gem "simple_form", github: "heartcombo/simple_form"
 
 gem "jbuilder"
+
+gem 'faker'
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem "importmap-rails"
 
