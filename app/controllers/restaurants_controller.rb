@@ -57,7 +57,6 @@ class RestaurantsController < ApplicationController
     end
   end
 
-
   # GET /restaurants/top
   def top
     @restaurants = Restaurant.where(rating: 5)
