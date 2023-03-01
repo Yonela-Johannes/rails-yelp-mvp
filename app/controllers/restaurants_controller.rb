@@ -1,5 +1,5 @@
 class RestaurantsController < ApplicationController
-  before_action :set_restaurant, only: %i[ show edit update destroy ]
+  before_action :set_restaurant, only: %i[ show edit update destroy chef]
 
   # GET /restaurants or /restaurants.json
   def index
@@ -56,6 +56,17 @@ class RestaurantsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+
+  # GET /restaurants/top
+  def top
+    @restaurants = Restaurant.where(rating: 5)
+  end
+
+    # GET /restaurants/chef
+    def chef
+      @chef_name = @restaurant.chef_name
+    end
 
   private
     # Use callbacks to share common setup or constraints between actions.
